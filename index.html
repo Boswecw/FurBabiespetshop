@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FurBabies | Your One Stop Pet Shop</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+<!--Styles sheet-->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-paw me-2"></i>FurBabies</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dog me-1"></i>Dogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cat me-1"></i>Cats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-fish me-1"></i>Aquatics</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html"><i class="fas fa-fish me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Animated Hero Banner -->
+  <section class="furbabies-banner">
+    <div class="container">
+      <h1 class="display-3 fw-bold"><i class="fas fa-paw me-2"></i>FurBabies</h1>
+      <p class="lead fs-4"><i class="fas fa-dog me-2"></i>Your One Stop Pet Shop Super Store</p>
+      <a href="#products" class="btn btn-lg btn-light mt-3">
+        <i class="fas fa-shopping-bag me-2"></i>Browse Products
+      </a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center"><i class="fas fa-star me-2"></i>Featured Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dog Food">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-bone me-2"></i>Premium Dog Food</h5>
+              <p class="price"><i class="fas fa-tag me-1"></i>$29.99</p>
+              <a href="#" class="btn btn-primary w-100">
+                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Cat Toys">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-mouse me-2"></i>Interactive Cat Toys</h5>
+              <p class="price"><i class="fas fa-tag me-1"></i>$14.99</p>
+              <a href="#" class="btn btn-primary w-100">
+                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Aquarium Kit">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-fish me-2"></i>Aquarium Starter Kit</h5>
+              <p class="price"><i class="fas fa-tag me-1"></i>$49.99</p>
+              <a href="#" class="btn btn-primary w-100">
+                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5"><i class="fas fa-comments me-2"></i>What Our Customers Say</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card mx-auto p-4 shadow" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <i class="fas fa-quote-left fa-2x text-muted mb-3"></i>
+              <p class="lead">FurBabies has everything I need for my pup. The staff is friendly and the quality is top-notch!</p>
+              <div class="mt-4">
+                <i class="fas fa-dog fa-2x text-warning mb-2"></i>
+                <h5 class="mb-0">Jessica R.</h5>
+                <small class="text-muted"><i class="fas fa-star text-warning"></i> 5.0 | Verified Buyer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mx-auto p-4 shadow" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <i class="fas fa-quote-left fa-2x text-muted mb-3"></i>
+              <p class="lead">My cat LOVES the toys I got here. Fast delivery and great prices!</p>
+              <div class="mt-4">
+                <i class="fas fa-cat fa-2x text-warning mb-2"></i>
+                <h5 class="mb-0">Marcus D.</h5>
+                <small class="text-muted"><i class="fas fa-star text-warning"></i> 4.8 | Repeat Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mx-auto p-4 shadow" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <i class="fas fa-quote-left fa-2x text-muted mb-3"></i>
+              <p class="lead">Excellent customer service and a wide variety of pet products. Highly recommended!</p>
+              <div class="mt-4">
+                <i class="fas fa-fish fa-2x text-warning mb-2"></i>
+                <h5 class="mb-0">Linda M.</h5>
+                <small class="text-muted"><i class="fas fa-star text-warning"></i> 5.0 | Aquarium Enthusiast</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1"><i class="fas fa-paw me-2"></i>&copy; 2025 FurBabies. All rights reserved.</p>
+      <div class="footer-icons">
+        <a href="#"><i class="fab fa-facebook text-white"></i></a>
+        <a href="#"><i class="fab fa-twitter text-white"></i></a>
+        <a href="#"><i class="fab fa-instagram text-white"></i></a>
+        <a href="#"><i class="fas fa-phone text-white"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

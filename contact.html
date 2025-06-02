@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - FurBabies</title>
+ <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+<!--Styles sheet-->
+  <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-paw me-2"></i>FurBabies</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dog me-1"></i>Dogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cat me-1"></i>Cats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-fish me-1"></i>Aquatics</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html"><i class="fas fa-fish me-1"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Animated Hero Banner -->
+  <section class="furbabies-banner">
+    <div class="container">
+      <h1 class="display-3 fw-bold"><i class="fas fa-paw me-2"></i>FurBabies</h1>
+      <p class="lead fs-4"><i class="fas fa-dog me-2"></i>Your One Stop Pet Shop Super Store</p> 
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-4"><i class="fas fa-paw contact-icon me-2"></i>Contact FurBabies</h1>
+      <p class="text-center text-muted mb-5">We’d love to hear from you! Whether you have a question about products, services, or anything else, our team is ready to help.</p>
+      
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label"><i class="fas fa-user me-1 contact-icon"></i>Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"><i class="fas fa-envelope me-1 contact-icon"></i>Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"><i class="fas fa-comment-dots me-1 contact-icon"></i>Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="How can we help?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane me-1"></i>Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-6">
+          <div class="mb-4">
+            <h5><i class="fas fa-map-marker-alt contact-icon me-2"></i>Our Store</h5>
+            <p>1234 Happy Tails Blvd<br>Lexington, KY 40505</p>
+          </div>
+          <div class="mb-4">
+            <h5><i class="fas fa-phone contact-icon me-2"></i>Call Us</h5>
+            <p>(859) 555-1234</p>
+          </div>
+          <div class="mb-4">
+            <h5><i class="fas fa-envelope contact-icon me-2"></i>Email Us</h5>
+            <p>support@furbabiespets.com</p>
+          </div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps?q=Lexington+KY&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
