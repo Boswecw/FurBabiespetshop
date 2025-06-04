@@ -7,32 +7,252 @@
   <title>About Us - FurBabies</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css">
+ <!-- Styles -->
+  <link rel="stylesheet" href="./about.css">
   <style>
     body {
       background-color: #fffdf9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
     }
 
-    .hero {
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      padding: 5rem 0;
-      text-align: center;
+    /* Navigation Styling */
+    .navbar {
+      background: linear-gradient(135deg, #ff6f61, #d45087);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin: 0 0.25rem;
+      border-radius: 8px;
+      padding: 0.5rem 1rem !important;
+    }
+
+    .nav-link:hover {
+      background-color: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+
+    .navbar-toggler {
+      border: 2px solid white;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Hero Banner */
+    .furbabies-banner {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      padding: 4rem 0;
       color: #3c2a21;
+      position: relative;
+      overflow: hidden;
     }
 
-    .btn-home {
-      background-color: #ff6f61;
-      color: #fff;
+    .furbabies-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paws" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(60,42,33,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23paws)"/></svg>');
+      pointer-events: none;
     }
 
-    .btn-home:hover {
-      background-color: #e65a50;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-icon {
+      max-height: clamp(40px, 8vw, 60px);
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+    }
+
+    /* Mission Section */
     .mission-section {
       background-color: #ffffff;
       padding: 4rem 0;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .mission-title {
+      color: #3c2a21;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .mission-text {
+      color: #5a5a5a;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .mission-image {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .mission-image:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Paw Love Section */
+    .paw-love-section {
+      background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+      padding: 4rem 0;
+      margin: 2rem 0;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .paw-love-title {
+      color: #d45087;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .paw-love-icon {
+      max-height: 40px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+    }
+
+    /* Cards for better organization */
+    .info-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-left: 4px solid #ff6f61;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .card-title {
+      color: #3c2a21;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-text {
+      color: #5a5a5a;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .bullet-list li {
+      color: #5a5a5a;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .bullet-list li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #3c2a21 0%, #2c1810 100%);
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .footer-icons a:hover {
+      color: #ff6f61;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .furbabies-banner {
+        padding: 3rem 0;
+      }
+      
+      .mission-section, .paw-love-section {
+        padding: 3rem 0;
+      }
+      
+      .info-card {
+        padding: 1.5rem;
+      }
+      
+      .navbar-nav {
+        text-align: center;
+        padding-top: 1rem;
+      }
+      
+      .mission-text {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      .info-card {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -40,13 +260,12 @@
 <body>
 
   <!-- Navigation -->
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg" aria-label="Main Navigation">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
+    <div class="container">
       <a class="navbar-brand" href="#"><i class="fas fa-paw me-2"></i>FurBabies</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-white"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -58,7 +277,7 @@
                 class="fas fa-cat me-1"></i>Cats</a></li>
           <li class="nav-item"><a class="nav-link" href="./Aquatics.html" aria-label="Browse Aquatics"><i
                 class="fas fa-fish me-1"></i>Aquatics</a></li>
-          <li class="nav-item"><a class="nav-link" href="./about.html" aria-label="About Us"><i
+          <li class="nav-item"><a class="nav-link active" href="./about.html" aria-label="About Us"><i
                 class="fas fa-info-circle me-1"></i>About</a></li>
           <li class="nav-item"><a class="nav-link" href="./contact.html" aria-label="Contact Us"><i
                 class="fas fa-envelope me-1"></i>Contact</a></li>
@@ -66,20 +285,20 @@
       </div>
     </div>
   </nav>
+  <br>
+  <br>
 
   <!-- Hero Banner -->
-  <section class="furbabies-banner d-flex align-items-center justify-content-center text-center py-5">
+  <section class="furbabies-banner d-flex align-items-center justify-content-center text-center">
     <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-10">
-          <h1 class="fw-bold display-4 display-md-3 mb-3">
-            <i class="fas fa-paw me-2"></i>
-            <img src="./assets/FurBabiesIcon.png" alt="FurBabies icon" class="img-fluid" style="max-height: 60px;" />
-          </h1>
-          <p class="lead fs-5 fs-md-4 mb-4">
-            <i class="fas fa-dog me-2"></i>Your One Stop Pet Super Store
-          </p>
-        </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <i class="fas fa-paw me-2"></i>
+          <img src="./assets/FurBabiesIcon.png" alt="FurBabies icon" class="hero-icon" />
+        </h1>
+        <p class="hero-subtitle">
+          <i class="fas fa-heart me-2"></i>Your One Stop Pet Super Store
+        </p>
       </div>
     </div>
   </section>
@@ -88,18 +307,93 @@
   <section class="mission-section">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-md-6">
-          <img src="./assets/Peoplecats.png" alt="Pets" class="img-fluid rounded shadow" />
+        <div class="col-lg-6 order-lg-2">
+          <img src="./assets/Peoplecats.png" alt="Happy pets with their families" class="img-fluid mission-image" />
         </div>
-        <div class="col-md-6">
-          <h2 class="fw-bold">Our Mission</h2>
-          <p class="text-muted">At <strong>FurBabies</strong>, we're more than just a pet store — we're pet lovers. Our
-            mission is to provide a joyful, affordable, and convenient shopping experience for pet parents. Whether you
-            have dogs, cats, birds, reptiles, or fish, we’ve got the toys, treats, and supplies to keep your companions
-            happy and healthy.</p>
-          <p class="text-muted">Founded in Lexington, KY, FurBabies has grown from a small local store to a full-service
-            mega shop offering grooming, adoption events, and expert advice — all under one roof.</p>
+        <div class="col-lg-6 order-lg-1">
+          <h2 class="mission-title"><i class="fas fa-heart me-2"></i>Our Mission</h2>
+          <p class="mission-text">
+            At <strong>FurBabies</strong>, we're more than just a pet store — we're pet lovers. Our mission is to provide a joyful, affordable, and convenient shopping experience for pet parents. Whether you have dogs, cats, birds, reptiles, or fish, we've got the toys, treats, and supplies to keep your companions happy and healthy.
+          </p>
+          <p class="mission-text">
+            Founded in Lexington, KY, FurBabies has grown from a small local store to a full-service mega shop offering grooming, adoption events, and expert advice — all under one roof.
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paw Love Section -->
+  <section class="paw-love-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="paw-love-title justify-content-center">
+          <img src="./assets/PawLoveicon.png" alt="Paw Love Icon" class="paw-love-icon" />
+          <strong>Paw Love Promise</strong>
+        </h2>
+        <p class="lead">Our non-profit animal welfare first promise to our community</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="info-card">
+            <h3 class="card-title">
+              <i class="fas fa-shield-heart text-primary"></i>
+              Compassion First
+            </h3>
+            <p class="card-text">
+              We are committed to the ethical treatment of all animals in our care. Our pets come exclusively from trusted sources:
+            </p>
+            <ul class="bullet-list">
+              <li>Reputable animal rescue groups</li>
+              <li>Certified ethical breeders with highest care standards</li>
+              <li>Local humane societies reducing pet homelessness</li>
+            </ul>
+            <p class="card-text">
+              <strong>We do not support puppy mills, unethical breeders, or any entity that compromises animal welfare.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="info-card">
+            <h3 class="card-title">
+              <i class="fas fa-file-contract text-success"></i>
+              Responsible Adoption
+            </h3>
+            <p class="card-text">
+              Adopting a pet is a lifelong commitment. All adoptions require a signed Ethical Adoption Contract ensuring each pet is placed in a safe, caring environment.
+            </p>
+            <p class="card-text"><strong>Our contract includes:</strong></p>
+            <ul class="bullet-list">
+              <li>Agreement to provide proper care, nutrition, and veterinary support</li>
+              <li>No-abuse, no-neglect policy</li>
+              <li>Return clauses if circumstances prevent continued care</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="info-card">
+            <h3 class="card-title">
+              <i class="fas fa-users text-warning"></i>
+              Our Commitment
+            </h3>
+            <p class="card-text">
+              At FurBabies, we're not just a pet shop — we're a community of animal lovers. We advocate for rescue-first thinking, responsible pet ownership, and lifelong animal well-being.
+            </p>
+            <p class="card-text">
+              <strong>Not one penny is made from the animals we have available in our stores.</strong> We believe every pet deserves a loving home, and every home deserves a happy, healthy companion.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="lead text-muted">
+          <i class="fas fa-heart text-danger me-2"></i>
+          Thank you for supporting an ethical future for pets. When you choose FurBabies, you're choosing kindness, compassion, and care that lasts a lifetime.
+        </p>
       </div>
     </div>
   </section>
@@ -107,12 +401,12 @@
   <!-- Footer -->
   <footer class="text-center">
     <div class="container">
-      <p class="mb-1"><i class="fas fa-paw me-2"></i>&copy; 2025 FurBabies. All rights reserved.</p>
+      <p class="mb-3"><i class="fas fa-paw me-2"></i>&copy; 2025 FurBabies. All rights reserved.</p>
       <div class="footer-icons">
-        <a href="#"><i class="fab fa-facebook text-white"></i></a>
-        <a href="#"><i class="fab fa-twitter text-white"></i></a>
-        <a href="#"><i class="fab fa-instagram text-white"></i></a>
-        <a href="#"><i class="fas fa-phone text-white"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
       </div>
     </div>
   </footer>
