@@ -1,0 +1,27 @@
+  :root {
+      --bluegrass-blue: #2A6F97;
+      --golden-retriever: #F4B942;
+      --turf-green: #6DA34D;
+      --pawprint-gray: #E0E0E0;
+      --tangerine-tail: #FF7043;
+      --charcoal-fur: #333333;
+      --snow-whiskers: #FFFFFF;
+  }
+
+  body {
+      background-color: #f9f9f9;
+  }
+
+  .product-card {
+      width: 18rem;
+  }
+
+  .nav-link:hover {
+      color: var(--golden-retriever) !important;
+  }
+
+  .navbar {
+      background-color: var(--bluegrass-blue);
+  }
+
+  
