@@ -53,18 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('product-grid');
   if (!grid) return;
 
+  // Ensure grid is a Bootstrap row
+  grid.classList.add('row', 'g-4');
+
   shop.forEach(product => {
-    const card = document.createElement('div');
-    card.className = 'card product-card shadow-sm';
-    card.innerHTML = `
-      <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
-      <div class="card-body text-center">
-        <h5 class="card-title text-primary">${product.title}</h5>
-        <p class="card-text small">${product.description}</p>
-        <p class="fw-bold text-success">${product.price}</p>
-        <button class="btn btn-warning">Add to Cart</button>
+    const col = document.createElement('div');
+    col.className = 'col-12 col-sm-6 col-md-4';
+
+    col.innerHTML = `
+      <div class="card h-100 product-card shadow-sm">
+        <img src="${product.image}" class="card-img-top p-2" alt="${product.title}">
+        <div class="card-body text-center">
+          <h5 class="card-title text-primary">${product.title}</h5>
+          <p class="card-text small">${product.description}</p>
+          <p class="fw-bold text-success">${product.price}</p>
+          <button class="btn btn-warning">Add to Cart</button>
+        </div>
       </div>
     `;
-    grid.appendChild(card);
+
+    grid.appendChild(col);
   });
 });
+
