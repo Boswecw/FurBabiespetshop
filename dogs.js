@@ -50,12 +50,12 @@ class Carousel {
 
 document.addEventListener("DOMContentLoaded", () => {
   const productData = [
-    new Product('German-Shepherd', 'assets/german shepherd.png', '$120', 'Gentle and hypoallergenic companion.'),
-    new Product('Great-Dane', 'assets/great-dane.png', '$45', 'Fluffy and fun, perfect for kids.'),
-    new Product('Labrador', 'assets/lab-puppy.png', '$35', 'Lively and social beginner pet.'),
-    new Product('Golden-Retriever', 'assets/GoldenRetriever2.png', '$25', 'Soft, cozy and easy to wash.'),
-    new Product('Chihuahua', 'assets/chihuahua.jpg', '$30', 'Wholesome nutrition for furry friends.'),
-    new Product('Saint-Bernard', 'assets/saint-bernard.png', '$20', 'Simple and clean litter solution.')
+    new Product('German-Shepherd', 'assets/german shepherd.png', '$12,000', 'Highly intelligent intensely active breed.'),
+    new Product('Great-Dane', 'assets/great-dane.png', '$850', 'One of the most famous huge breed dogs.'),
+    new Product('Labrador', 'assets/lab-puppy.png', '$950', 'One of Americas most loved breed.'),
+    new Product('Golden-Retriever', 'assets/GoldenRetriever2.png', '$950', 'Very social and friendly breed.'),
+    new Product('Chihuahua', 'assets/chihuahua.jpg', '$900', 'Very popular small breed.'),
+    new Product('Saint-Bernard', 'assets/saint-bernard.png', '$1,200', 'Huge loveable clowns.')
   ];
 
   const carousel = new Carousel(productData, "carouselContent");

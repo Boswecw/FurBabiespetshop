@@ -14,7 +14,7 @@ const shop = [
   {
     title: 'Parrot',
     image: './assets/Parrot.png',
-    price: '$400',
+    price: '$4,000',
     description: 'Colorful and talkative, needs lots of love and attention.'
   },
   {
@@ -32,7 +32,7 @@ const shop = [
   {
     title: 'Pet Bed',
     image: './assets/PetBeds.png',
-    price: '$25',
+    price: '$65',
     description: 'Soft, cozy and easy to wash.'
   },
   {
@@ -44,7 +44,7 @@ const shop = [
   {
     title: 'Litter Box',
     image: './assets/literbox.png',
-    price: '$20',
+    price: '$45',
     description: 'Simple and clean litter solution.'
   }
 ];

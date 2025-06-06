@@ -50,12 +50,12 @@ class Carousel {
 
 document.addEventListener("DOMContentLoaded", () => {
   const fishProducts = [
-    new Product('Betas', 'assets/Betafish.jpg', '$120', 'Gentle and loveable companion.'),
-    new Product('Colorful Fish', 'assets/purple-fish.jpg', '$45', 'Fluffy and fun, perfect for kids.'),
-    new Product('Glowing Fish', 'assets/fish-glow.jpg', '$35', 'Lively and social beginner pet.'),
-    new Product('Small Tank', 'assets/Small-fish-tank.png', '$25', 'Beautiful fluffy ball of fun.'),
-    new Product('Medium Tank', 'assets/medium-fish-tank.png', '$30', 'Talkative social and unique companion.'),
-    new Product('Large Tank', 'assets/Large-Fish-Tank-Kit.png', '$20', 'A friendly loveable cuddly buddy.')
+    new Product('Betas', 'assets/Betafish.jpg', '$12', 'Colorfully, delightful.'),
+    new Product('Colorful Fish', 'assets/purple-fish.jpg', '$45', 'Amazingly Beautiful.'),
+    new Product('Glowing Fish', 'assets/fish-glow.jpg', '$50', 'Shockingly Beautiful.'),
+    new Product('Small Tank', 'assets/Small-fish-tank.png', '$25', 'Great, starter tank.'),
+    new Product('Medium Tank', 'assets/medium-fish-tank.png', '$100', 'Great tank.'),
+    new Product('Large Tank', 'assets/Large-Fish-Tank-Kit.png', '$300', 'A beautiful large tank.')
   ];
 
   const carousel = new Carousel(fishProducts, "carouselContent");
