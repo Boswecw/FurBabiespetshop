@@ -245,4 +245,10 @@
       }
     }
   
+ /* Optional spacing for video + mission */
+section .ratio iframe {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
  
